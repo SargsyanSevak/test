@@ -56,12 +56,11 @@ const ContactMe = () => {
   return (
     <>
       <div className="contact-me-container ">
-        <div className="open absolute right-4 top-4 md:right-10">
+        <div className="open fixed right-4 top-4 md:right-10">
           <Button
             variant="text"
-            color="success"
             startIcon={<CallIcon />}
-            className="text-white border-x-1 border-y-1 bg-inherit  border-x-white border-y-white btn_text"
+            className="text-white btn_text"
             onClick={() => setOwnWidth(true)}
           >
             Contact
