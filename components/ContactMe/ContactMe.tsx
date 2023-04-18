@@ -12,7 +12,6 @@ const steps = [
     label: "SEND A MESSAGE IN A BOTTLE",
     description: (
       <textarea
-        
         placeholder="Type your message here ..."
         className="w-60 text-sm px-4 py-4 outline-none bg-inherit"
       />
@@ -69,11 +68,11 @@ const ContactMe = () => {
       </div>
 
       <div
-        className={`bg-yellow-50 contact-me h-screen fixed right-0 top-0 bottom-0 z-50 ${
-          ownWidth ? "w-70" : "hidden"
+        className={`bg-yellow-50 contact-me h-screen fixed right-0 top-0 bottom-0 z-50  ${
+          ownWidth ? "w-80" : "hidden"
         }`}
       >
-        <div className="contact_title  h-1/6 pt-4 pl-2">
+        <div className="contact_title h-1/6 pt-4 pl-2 absolute">
           <Button
             variant="text"
             color="success"
@@ -84,13 +83,15 @@ const ContactMe = () => {
             Close
           </Button>
         </div>
-        <div className="contact-logo h-1/3 flex flex-col justify-evenly items-center">
-          <Image src="/main-logo.png" alt="" width={80} height={80} />
-          <h4 className="text-lg text-orange-400">Have you any questions?</h4>
-          <h6>I am at your services</h6>
+        <div className="contact-logo h-1/2 flex flex-col justify-evenly items-center">
+          <Image src="/main-logo.png" alt="" width={150} height={150} />
+          <h4 className="text-xl text-orange-400 font-bold">
+            Have you any <span className="text-black"> questions?</span> 
+            </h4>
+          <h6 className="font-bold">I am at your <span className="text-orange-400">services</span> </h6>
         </div>
-        <div className="contact-input  h-1/2 flex flex-col justify-evenly items-center">
-          <h3 className="text-bold text-blue-500">{steps[activeStep].label}</h3>
+        <div className="contact-input h-1/2 flex flex-col justify-around items-center">
+          <h3 className="font-bold text-black-500 py-8">{steps[activeStep].label}</h3>
           <div>{steps[activeStep].description}</div>
           <MobileStepper
             className="bg-inherit gap-12"
