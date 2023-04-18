@@ -13,7 +13,7 @@ const steps = [
     description: (
       <textarea
         placeholder="Type your message here ..."
-        className="w-60 text-sm px-4 py-4 outline-none bg-inherit"
+        className="w-60 h-20 border-y-2 border-x-2  text-sm  outline-none bg-inherit px-2 py-2"
       />
     ),
   },
@@ -23,7 +23,7 @@ const steps = [
       <input
         type="text"
         placeholder="Type your full name here ..."
-        className="w-60 text-sm px-4 py-4 outline-none bg-inherit"
+        className="w-60 text-sm px-4 py-4 outline-none bg-inherit border-y-2 border-x-2"
       />
     ),
   },
@@ -33,7 +33,7 @@ const steps = [
       <input
         type="text"
         placeholder="Type your e-mail address here ..."
-        className="w-60 text-sm px-4 py-4 outline-none bg-inherit"
+        className="w-60 text-sm px-4 py-4 outline-none bg-inherit border-y-2 border-x-2"
       />
     ),
   },
