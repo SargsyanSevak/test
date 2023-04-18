@@ -68,12 +68,12 @@ const ContactMe = () => {
         </div>
       </div>
 
-      <div 
-       className={`bg-yellow-50 contact-me h-screen fixed right-0 top-0 bottom-0 z-50 ${
-        ownWidth ? "w-70" : "hidden"
-      }`}
+      <div
+        className={`bg-yellow-50 contact-me h-screen fixed right-0 top-0 bottom-0 z-50 ${
+          ownWidth ? "w-70" : "hidden"
+        }`}
       >
-        <div className="contact_title bg-red-500 h-1/6 pt-4 pl-2">
+        <div className="contact_title  h-1/6 pt-4 pl-2">
           <Button
             variant="text"
             color="success"
@@ -84,12 +84,12 @@ const ContactMe = () => {
             Close
           </Button>
         </div>
-        <div className="contact-logo bg-green-600 h-1/3 flex flex-col justify-evenly items-center">
+        <div className="contact-logo h-1/3 flex flex-col justify-evenly items-center">
           <Image src="/main-logo.png" alt="" width={80} height={80} />
           <h4 className="text-lg text-orange-400">Have you any questions?</h4>
-          <h6>Im at your services</h6>
+          <h6>I am at your services</h6>
         </div>
-        <div className="contact-input bg-blue-600 h-1/2 flex flex-col justify-evenly items-center">
+        <div className="contact-input  h-1/2 flex flex-col justify-evenly items-center">
           <h3 className="text-bold text-blue-500">{steps[activeStep].label}</h3>
           <div>{steps[activeStep].description}</div>
           <MobileStepper
@@ -129,72 +129,6 @@ const ContactMe = () => {
           />
         </div>
       </div>
-      {/* <div
-        className={`bg-yellow-50 contact-me h-screen fixed right-0 top-0 bottom-0 z-50 ${
-          ownWidth ? "w-80" : "hidden"
-        }`}
-      >
-        <Button
-          variant="text"
-          color="success"
-          startIcon={<CloseIcon />}
-          className="text-black border-x-1 border-y-1 bg-inherit  border-x-white border-y-white btn_text pt-4 pl-2"
-          onClick={() => setOwnWidth(false)}
-        >
-          Close
-        </Button>
-
-        <div className="contact-body py-8 absolute">
-          <div className="contact-description flex justify-center items-center flex-col gap-10">
-            <Image src="/main-logo.png" alt="" width={80} height={80} />
-            <h4 className="text-lg text-orange-400">Have you any questions?</h4>
-            <h6>Im at your services</h6>
-          </div>
-          <div className="input-form">
-            <h3 className="text-bold text-blue-500">
-              {steps[activeStep].label}
-            </h3>
-            <div>{steps[activeStep].description}</div>
-          
-
-          <MobileStepper
-            className="bg-inherit gap-12"
-            variant="text"
-            steps={maxSteps}
-            position="static"
-            activeStep={activeStep}
-            nextButton={
-              <Button
-                size="small"
-                onClick={handleNext}
-                disabled={activeStep === maxSteps - 1}
-              >
-                Next
-                {theme.direction === "rtl" ? (
-                  <KeyboardArrowLeft />
-                ) : (
-                  <KeyboardArrowRight />
-                )}
-              </Button>
-            }
-            backButton={
-              <Button
-                size="small"
-                onClick={handleBack}
-                disabled={activeStep === 0}
-              >
-                {theme.direction === "rtl" ? (
-                  <KeyboardArrowRight />
-                ) : (
-                  <KeyboardArrowLeft />
-                )}
-                Back
-              </Button>
-            }
-          />
-          </div>
-        </div>
-      </div> */}
     </>
   );
 };
