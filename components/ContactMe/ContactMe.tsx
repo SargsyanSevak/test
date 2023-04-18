@@ -73,7 +73,7 @@ const ContactMe = () => {
         ownWidth ? "w-70" : "hidden"
       }`}
       >
-        <div className="contact_title  h-1/6 pt-4 pl-2">
+        <div className="contact_title bg-red-500 h-1/6 pt-4 pl-2">
           <Button
             variant="text"
             color="success"
@@ -84,12 +84,12 @@ const ContactMe = () => {
             Close
           </Button>
         </div>
-        <div className="contact-logo  h-1/3 flex flex-col justify-evenly items-center">
+        <div className="contact-logo bg-green-600 h-1/3 flex flex-col justify-evenly items-center">
           <Image src="/main-logo.png" alt="" width={80} height={80} />
           <h4 className="text-lg text-orange-400">Have you any questions?</h4>
           <h6>Im at your services</h6>
         </div>
-        <div className="contact-input  h-1/2 flex flex-col justify-center items-center">
+        <div className="contact-input bg-blue-600 h-1/2 flex flex-col justify-evenly items-center">
           <h3 className="text-bold text-blue-500">{steps[activeStep].label}</h3>
           <div>{steps[activeStep].description}</div>
           <MobileStepper
