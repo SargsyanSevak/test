@@ -1,0 +1,34 @@
+.button{
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    border-radius: 5px;font-size: 14px;
+    transition: .3s ease-in-out;
+}
+.primary{
+    color: rgb(0, 0, 0);
+    background-color: red;
+}
+.primary:hover{
+    background-color:rgb(255, 119, 0);
+}
+.ghost{
+    color: black;
+    background: none;
+    border: 1px solid gray;
+}
+.ghost:hover{
+    color: white;
+    background-color: red;
+}
+.arrow{
+    display: inline-block;
+    margin-left: 10px;
+    
+}
+.down{
+    transform: rotate(90deg);
+}
