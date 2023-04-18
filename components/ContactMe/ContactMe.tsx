@@ -90,11 +90,11 @@ const ContactMe = () => {
             </h4>
           <h6 className="font-bold">I am at your <span className="text-orange-400">services</span> </h6>
         </div>
-        <div className={`contact-input h-1/2 flex flex-col justify-start md:justify-evenly items-center`}>
+        <div className={`contact-input h-1/2 flex flex-col justify-start md:justify-evenly items-center gap-6 md:gap-0`}>
           <h3 className="font-bold text-black-500 py-8">{steps[activeStep].label}</h3>
           <div>{steps[activeStep].description}</div>
           <MobileStepper
-            className="bg-inherit gap-12"
+            className="bg-yellow-50 gap-12"
             variant="text"
             steps={maxSteps}
             position="static"
