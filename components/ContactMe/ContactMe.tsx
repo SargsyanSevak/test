@@ -11,8 +11,8 @@ const steps = [
   {
     label: "SEND A MESSAGE IN A BOTTLE",
     description: (
-      <input
-        type="text"
+      <textarea
+        
         placeholder="Type your message here ..."
         className="w-60 text-sm px-4 py-4 outline-none bg-inherit"
       />
