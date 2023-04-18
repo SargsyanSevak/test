@@ -76,7 +76,7 @@ const ContactMe = () => {
           variant="text"
           color="success"
           startIcon={<CloseIcon />}
-          className="text-black border-x-1 border-y-1 bg-inherit  border-x-white border-y-white btn_text"
+          className="text-black border-x-1 border-y-1 bg-inherit  border-x-white border-y-white btn_text top-6 left-2"
           onClick={() => setOwnWidth(false)}
         >
           Close
