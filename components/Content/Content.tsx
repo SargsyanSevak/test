@@ -11,26 +11,8 @@ const Content = () => {
           I am <span className="text-teal-400">Sevak</span>{" "}
         </span>
         <p className="span_group">
-          <span>A well</span>
-          <span> experienced </span>
-          <span> UI/UX Designer</span>
-          <span> and</span>
-          <span> Web Developer</span>
-          <span>.</span>
-          <span> I</span>
-          <span> enjoy </span>
-          <span> Creating</span>
-          <span>Delightful, </span>
-          <span>Human-Centered </span>
-          <span>& </span>
-          <span>Unique </span>
-          <span>Digital </span>
-          <span>Experiences.</span>
-          <span></span>
-          <span></span>
-          <span></span>
-             
-          
+          A well experienced UI/UX Designer and Web Developer. I enjoy Creating
+          Delightful, Human-Centered & Unique Digital Experiences.
         </p>
         <div className="btn-group flex flex-row anim">
           <Button variant="text" className="text-white btn_text">
