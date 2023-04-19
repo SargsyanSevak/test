@@ -45,7 +45,7 @@ export default function TailHeader() {
                   <div className="flex flex-shrink-0 justify-center items-center h-20">
                     <Image
                       className="h-16 w-auto pb-2"
-                      src="/main-logo.png"
+                      src="/logo1.png"
                       alt="Your Company"
                       width={150}
                       height={150}
