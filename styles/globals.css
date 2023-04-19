@@ -79,8 +79,6 @@ main{
   overflow-y: scroll;
 }
 .container{
-  animation: fadeIn;
-  animation-duration: 3s;
   padding-left: 60px;
 }
 .nav_item{
@@ -90,6 +88,10 @@ main{
   animation-duration: 3s;
 }
 .audio_player{
+  animation: fadeIn;
+  animation-duration: 3s;
+}
+.anim{
   animation: fadeIn;
   animation-duration: 3s;
 }
@@ -141,10 +143,14 @@ main{
     padding-top: 80px;
   }
   .container{
-    padding-left: 0px;
+    padding-left: 10px;
   }
 }
-
+@media (min-height: 400px) {
+  .nav_item_container{
+    display:none
+  }
+}
 #globe{
   color: #42e7e1;
 }

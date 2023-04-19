@@ -3,7 +3,7 @@ import React from "react";
 import AudioPlayer from "../UI/AudioPlayer/AudioPlayer";
 import Link from "next/link";
 import { useRouter } from "next/router";
-
+import Image from "next/image";
 const navList: NavProps[] = [
   {
     name: "Home",
@@ -27,7 +27,7 @@ const AsideMenu = () => {
 
   return (
     <nav className="nav_item_container hidden md:flex">
-      <div className="nav-items h-2/4  flex justify-evenly ound items-center flex-col-reverse">
+      <div className="nav-items h-2/4  flex justify-evenly ound items-center flex-col-reverse ">
         {navList.map((nav, i) => (
           <Link
             href={nav.href}
@@ -43,9 +43,16 @@ const AsideMenu = () => {
         ))}
       </div>
 
-      <span className="nav_item flex justify-center items-center logo">
+      <span className="nav_item flex justify-center items-center logo pr-28">
         Sargsyan
       </span>
+      <Image
+        className="anim fixed top-0"
+        src="/logo1.png"
+        alt="logo"
+        width={180}
+        height={180}
+      />
       <div className="border_right flex justify-center items-center "></div>
       <AudioPlayer src="/sound.mp3" />
     </nav>
