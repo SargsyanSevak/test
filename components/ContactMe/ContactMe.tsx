@@ -86,12 +86,18 @@ const ContactMe = () => {
         <div className="contact-logo h-1/2 flex flex-col justify-evenly items-center">
           <Image src="/main-logo.png" alt="" width={150} height={150} />
           <h4 className="text-xl text-orange-400 font-bold">
-            Have you any <span className="text-black"> questions?</span> 
-            </h4>
-          <h6 className="font-bold">I am at your <span className="text-orange-400">services</span> </h6>
+            Have you any <span className="text-black"> questions?</span>
+          </h4>
+          <h6 className="font-bold">
+            I am at your <span className="text-orange-400">services</span>{" "}
+          </h6>
         </div>
-        <div className={`contact-input h-1/2 flex flex-col justify-start md:justify-evenly items-center gap-6 md:gap-0`}>
-          <h3 className="font-bold text-black-500 py-8">{steps[activeStep].label}</h3>
+        <div
+          className={`contact-input h-1/2 flex flex-col justify-start md:justify-evenly items-center gap-6 md:gap-0`}
+        >
+          <h3 className="font-bold text-black-500 py-8">
+            {steps[activeStep].label}
+          </h3>
           <div>{steps[activeStep].description}</div>
           <MobileStepper
             className="bg-yellow-50 gap-12"

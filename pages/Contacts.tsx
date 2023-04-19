@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import React from 'react'
+import Image from 'next/image'
 
 const Contacts = () => {
   return (
@@ -8,7 +9,7 @@ const Contacts = () => {
         <title>Contacts</title>
         <meta name="description" content="sargsyan" />
       </Head>
-      Contacts page
+      Contact
       </section>
   )
 }
