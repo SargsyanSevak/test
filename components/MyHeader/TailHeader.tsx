@@ -32,7 +32,7 @@ export default function TailHeader() {
               <div className="relative flex h-16 items-center justify-between">
                 <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
                   {/* Mobile menu button*/}
-                  <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-black hover:bg-gray-700 hover:text-white transition-all">
+                  <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-teal-400 hover:bg-teal-600 hover:text-white transition-all">
                     <span className="sr-only">Open main menu</span>
                     {open ? (
                       <XMarkIcon className="block h-10 w-10" aria-hidden="true" />
@@ -52,7 +52,6 @@ export default function TailHeader() {
                       height={150}
                     />
                     </Link>
-                    
                   </div>
                 </div>
               </div>
@@ -63,13 +62,12 @@ export default function TailHeader() {
                   <Link
                     href={item.href}
                     key={item.name}
-                    className="block rounded-md px-3 py-2 text-base font-medium"
+                    className="block rounded-md px-3 py-2 text-base font-medium text-white"
                   >
                     {item.name}
                   </Link>
                 ))}
               </div>
-              <Social />
             </Disclosure.Panel>
           </>
         )}
