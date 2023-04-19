@@ -84,7 +84,7 @@ const ContactMe = () => {
           </Button>
         </div>
         <div className="contact-logo h-1/2 flex flex-col justify-evenly items-center">
-          <Image src="/logo1.png" alt="" width={150} height={150} />
+          <Image src="/logo.png" alt="" width={150} height={150} />
           <h4 className="text-xl text-orange-400 font-bold">
             Have you any <span className="text-black"> questions?</span>
           </h4>
