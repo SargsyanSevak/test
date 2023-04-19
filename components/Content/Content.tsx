@@ -1,21 +1,33 @@
-import React from 'react'
-import SvgImage from '../Bg/SvgImage'
+import React from "react";
+import SvgImage from "../Bg/SvgImage";
+import Button from "@mui/material/Button";
 
 const Content = () => {
   return (
-  <div className='content flex justify-center items-center h-screen'>
-    <div className="home flex justify-center items-center h-100	">
-      <div className="home-description w-auto md:w-3/6 text-white">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem numquam ea accusamus quaerat quod quos quis quisquam saepe quidem deleniti, nulla maxime reprehenderit eligendi veniam voluptas assumenda. Consectetur, nihil. Voluptates, dolores vitae! Odio ipsum fugit vel minus corrupti architecto nulla! Nesciunt perspiciatis perferendis, officiis tenetur iure, neque ipsum repudiandae dolorem quidem illo asperiores, accusantium facere explicabo nisi? Cum minus magni, nulla ipsam veritatis ullam eum libero distinctio ea? Aliquam harum aliquid facilis aperiam repudiandae quaerat recusandae a pariatur? Corporis, excepturi? Nobis eligendi placeat corporis molestias eveniet ut obcaecati rerum in sed, amet impedit labore doloremque iste. Voluptatum, rerum? Nihil, vitae?
+    <div className="content container h-screen flex ">
+      <div className="container h-4/4 flex flex-col justify-center items-start gap-6 text-white">
+        <span className="text-7xl font-bold">Hi there</span>
+        <span className="text-7xl font-bold">
+          I am <span className="text-teal-400">Sevak</span>{" "}
+        </span>
+        <p>
+          A well experienced UI/UX Designer and Web Developer. I enjoy Creating
+          Delightful, Human-Centered & Unique Digital Experiences.
+        </p>
+        <div className="btn-group flex flex-row">
+          <Button variant="text" className="text-white btn_text">
+            Our Work
+          </Button>
+          <Button variant="text" className="text-white btn_text">
+            About Us
+          </Button>
+        </div>
       </div>
-       <div className='w-3/6 h-100 overflow-hidden  hidden md:block'> 
-      <SvgImage />
+      <div className="item container h-4/4 hidden md:flex flex-col justify-center items-end ">
+        <SvgImage />
       </div>
-  </div>
     </div>
- 
-   
-  )
-}
+  );
+};
 
-export default Content
+export default Content;

@@ -51,7 +51,7 @@ main{
   width: 100%;
 }
 .nav_item_container{
-  width: 100px;
+  width: 70px;
   display: flex;
   height: 100vh;
   flex-direction:column-reverse;
@@ -76,10 +76,12 @@ main{
   z-index: -1;
 }
 .content{
-  padding-top: 20px;
-  padding-left: 120px;
-  padding-right: 20px;
   overflow-y: scroll;
+}
+.container{
+  animation: fadeIn;
+  animation-duration: 3s;
+  padding-left: 70px;
 }
 .nav_item{
   transform: rotate(90deg);
@@ -111,24 +113,7 @@ main{
   animation: borderMaker;
   animation-duration:2s;
 }
-.border_img{
-  width: 70px;
-  height: 100vh;
-  position: absolute;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  position: absolute;
-  top: 0;
-  animation: borderMaker;
-  animation-duration: 2s;
-}
-.boo{
-  position: absolute;
-  margin-left: 30px;
-  right: -15px;
-  bottom: -14px;
-}
+
 .active{
   color: red;
 }
@@ -154,6 +139,9 @@ main{
   .content{
     padding: 20px;
     padding-top: 80px;
+  }
+  .container{
+    padding-left: 0px;
   }
 }
 

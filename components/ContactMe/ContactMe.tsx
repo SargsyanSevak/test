@@ -68,7 +68,7 @@ const ContactMe = () => {
       </div>
 
       <div
-        className={`bg-yellow-50 contact-me h-screen fixed right-0 top-0 bottom-0 z-50  ${
+        className={`bg-white contact-me h-screen fixed right-0 top-0 bottom-0 z-50  ${
           ownWidth ? "w-80" : "hidden"
         }`}
       >
@@ -85,11 +85,11 @@ const ContactMe = () => {
         </div>
         <div className="contact-logo h-1/2 flex flex-col justify-evenly items-center">
           <Image src="/logo.png" alt="" width={150} height={150} />
-          <h4 className="text-xl text-orange-400 font-bold">
+          <h4 className="text-xl text-teal-400 font-bold">
             Have you any <span className="text-black"> questions?</span>
           </h4>
           <h6 className="font-bold">
-            I am at your <span className="text-orange-400">services</span>{" "}
+            I am at your <span className="text-teal-400">services</span>{" "}
           </h6>
         </div>
         <div
@@ -100,7 +100,7 @@ const ContactMe = () => {
           </h3>
           <div>{steps[activeStep].description}</div>
           <MobileStepper
-            className="bg-yellow-50 gap-12"
+            className="gap-12"
             variant="text"
             steps={maxSteps}
             position="static"
