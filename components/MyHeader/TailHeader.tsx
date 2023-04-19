@@ -43,13 +43,16 @@ export default function TailHeader() {
                 </div>
                 <div className="flex flex-1 items-center justify-center md:hidden">
                   <div className="flex flex-shrink-0 justify-center items-center h-20">
-                    <Image
+                    <Link href='/'>
+                      <Image
                       className="h-16 w-auto pb-2"
                       src="/logo.png"
                       alt="Your Company"
                       width={150}
                       height={150}
                     />
+                    </Link>
+                    
                   </div>
                 </div>
               </div>

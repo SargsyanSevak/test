@@ -46,13 +46,10 @@ const AsideMenu = () => {
       <span className="nav_item flex justify-center items-center logo pr-28">
         Sargsyan
       </span>
-      <Image
-        className="anim fixed top-0"
-        src="/logo1.png"
-        alt="logo"
-        width={180}
-        height={180}
-      />
+      <Link href="/" className="anim fixed top-0">
+        <Image src="/logo1.png" alt="logo" width={180} height={180} />
+      </Link>
+
       <div className="border_right flex justify-center items-center "></div>
       <AudioPlayer src="/sound.mp3" />
     </nav>
