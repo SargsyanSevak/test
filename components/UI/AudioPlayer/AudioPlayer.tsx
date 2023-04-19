@@ -18,8 +18,8 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ src }) => {
   return (
     <div className='w-20 h-20 gap-4 flex justify-center items-center absolute bottom-0 audio_player'>
       <audio src={src} ref={audioRef} />
-      <FaPlay  onClick={handlePlay}  className='text-white hover:text-gray-300 cursor-pointer transition-all'/>
-      <FaPause onClick={handlePause} className='text-white hover:text-gray-300  cursor-pointer transition-all'/>
+      <FaPlay  onClick={handlePlay}  className='text-white hover:text-teal-400 cursor-pointer transition-all'/>
+      <FaPause onClick={handlePause} className='text-white hover:text-teal-400 cursor-pointer transition-all'/>
     </div>
   );
 };

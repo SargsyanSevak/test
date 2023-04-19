@@ -32,9 +32,9 @@ const AsideMenu = () => {
           <Link
             href={nav.href}
             key={i}
-            className={`nav_item flex justify-center items-center text-white transition-all ${
+            className={`tracking-wide font-bold px-6 py-8 nav_item flex justify-center items-center text-teal-400 transition-all ${
               router.pathname === nav.href
-                ? "text-md px-4 py-8 border-b-8 border-gray-300"
+                ? "border-b-4 border-gray-300 "
                 : "text-white"
             }`}
           >

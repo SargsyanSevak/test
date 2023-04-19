@@ -51,7 +51,7 @@ main{
   width: 100%;
 }
 .nav_item_container{
-  width: 70px;
+  width: 95px;
   display: flex;
   height: 100vh;
   flex-direction:column-reverse;
@@ -81,7 +81,7 @@ main{
 .container{
   animation: fadeIn;
   animation-duration: 3s;
-  padding-left: 70px;
+  padding-left: 60px;
 }
 .nav_item{
   transform: rotate(90deg);
