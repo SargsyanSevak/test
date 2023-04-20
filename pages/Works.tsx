@@ -51,11 +51,10 @@ export default function DotsMobileStepper() {
         <meta name="description" content="sargsyan" />
       </Head>
 
-      <div className="container flex justify-between items-center anim">
+      <div className="container bg-red-400 flex justify-between items-center">
         <MobileStepper
-          className="bg-inherit h-screen hidden md:flex flex-col w-20 justify-evenly items-center text-white"
+          className="bg-red-500 h-screen hidden md:flex flex-col w-20 justify-evenly items-center"
           variant="dots"
-          color="success"
           steps={6}
           position="static"
           activeStep={activeStep}
@@ -65,7 +64,6 @@ export default function DotsMobileStepper() {
               size="small"
               onClick={handleNext}
               disabled={activeStep === 5}
-              className=' text-white'
             >
               
               {theme.direction === "rtl" ? (
@@ -78,7 +76,6 @@ export default function DotsMobileStepper() {
           }
           backButton={
             <Button
-            className=" text-white"
               size="small"
               onClick={handleBack}
               disabled={activeStep === 0}
@@ -92,21 +89,21 @@ export default function DotsMobileStepper() {
             </Button>
           }
         />
-        <div className="portfolio w-screen md:w-3/4 h-screen  flex flex-col justify-center">
-          <div className="title  w-4/4 h-20 flex justify-center items-center">
-            <p className="text-2xl font-bold tracking-wide">{portfolio[activeStep].name}</p>
+        <div className="portfolio w-screen md:w-3/4 h-screen bg-yellow-400 flex flex-col justify-center">
+          <div className="title bg-green-500 w-4/4 h-20 flex justify-center items-center">
+            <p className="text-4xl font-bold tracking-wide">{portfolio[activeStep].name}</p>
           </div>
-          <div className="portfolio-body  w-4/4 h-2/4 flex justify-center items-center overflow-hidden">
+          <div className="portfolio-body bg-pink-500 w-4/4 h-96 flex justify-center items-center overflow-hidden">
             <img src={portfolio[activeStep].url} alt={portfolio[activeStep].name}width={600} height={500} />
           </div>
-          <div className="discover-btn w-4/4 h-20 flex justify-center items-center">
+          <div className="discover-btn bg-purple-500 w-4/4 h-20 flex justify-center items-center">
           <Button variant="text" className="text-white btn_text">
             Discover +
           </Button>
           </div>
-          <div className="w-4/4 h-20 flex justify-center items-center md:hidden">
+          <div className="title bg-green-500 w-4/4 h-20 flex justify-center items-center md:hidden">
           <MobileStepper
-          className="bg-inherit h-screen flex md:hidden flex-col w-20 justify-evenly items-center text-white"
+          className="bg-red-500"
           variant="dots"
           steps={6}
           position="static"
@@ -117,7 +114,6 @@ export default function DotsMobileStepper() {
               size="small"
               onClick={handleNext}
               disabled={activeStep === 5}
-              className=' text-white'
             >
               
               {theme.direction === "rtl" ? (
@@ -130,7 +126,6 @@ export default function DotsMobileStepper() {
           }
           backButton={
             <Button
-            className=' text-white'
               size="small"
               onClick={handleBack}
               disabled={activeStep === 0}

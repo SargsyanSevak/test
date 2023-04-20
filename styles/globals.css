@@ -15,7 +15,19 @@ body{
   min-height: 100vh;
  color: white;
 }
-
+.MuiPaper{
+  background-color: inherit;
+  color: white;
+}
+.css-1knaqv7-MuiButtonBase-root-MuiButton-root{
+  color: white;
+}
+.css-11syc77-MuiPaper-root-MuiMobileStepper-root{
+background: inherit;
+}
+.css-11syc77-MuiPaper-root-MuiMobileStepper-root{
+  color: white;
+}
 .header{
   width: 1536px;
   max-width: 100%;
