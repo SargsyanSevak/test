@@ -10,7 +10,7 @@ const Content = () => {
         <span className="text-7xl font-bold pl-2 md:pl-0">
           I am <span className="text-teal-400">Sevak</span>{" "}
         </span>
-        <p className="span_group pl-2 md:pl-0">
+        <p className="span_group pr-4 md:pr-0">
           <span>A well</span>
           <span> experienced </span>
           <span> UI/UX Designer</span>
