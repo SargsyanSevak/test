@@ -51,44 +51,10 @@ export default function DotsMobileStepper() {
         <meta name="description" content="sargsyan" />
       </Head>
 
-      <div className="container bg-red-400 flex justify-between items-center">
-        <MobileStepper
-          className="bg-red-500 h-screen hidden md:flex flex-col w-20 justify-evenly items-center"
-          variant="dots"
-          steps={6}
-          position="static"
-          activeStep={activeStep}
-          sx={{ maxWidth: 400, flexGrow: 1 }}
-          nextButton={
-            <Button
-              size="small"
-              onClick={handleNext}
-              disabled={activeStep === 5}
-            >
-              
-              {theme.direction === "rtl" ? (
-                <KeyboardArrowLeft />
-              ) : (
-                <KeyboardArrowRight />
-              )}
-              next
-            </Button>
-          }
-          backButton={
-            <Button
-              size="small"
-              onClick={handleBack}
-              disabled={activeStep === 0}
-            >
-              {theme.direction === "rtl" ? (
-                <KeyboardArrowRight />
-              ) : (
-                <KeyboardArrowLeft />
-              )}
-              previous
-            </Button>
-          }
-        />
+      <div className="container bg-red-400 flex justify-around items-center">
+        <div className="stepper h-screen w-52 bg-pink-600 hidden md:block">
+
+        </div>
         <div className="portfolio w-screen md:w-3/4 h-screen bg-yellow-400 flex flex-col justify-center">
           <div className="title bg-green-500 w-4/4 h-20 flex justify-center items-center">
             <p className="text-4xl font-bold tracking-wide">{portfolio[activeStep].name}</p>
@@ -102,43 +68,7 @@ export default function DotsMobileStepper() {
           </Button>
           </div>
           <div className="title bg-green-500 w-4/4 h-20 flex justify-center items-center md:hidden">
-          <MobileStepper
-          className="bg-red-500"
-          variant="dots"
-          steps={6}
-          position="static"
-          activeStep={activeStep}
-          sx={{ maxWidth: 400, flexGrow: 1 }}
-          nextButton={
-            <Button
-              size="small"
-              onClick={handleNext}
-              disabled={activeStep === 5}
-            >
-              
-              {theme.direction === "rtl" ? (
-                <KeyboardArrowLeft />
-              ) : (
-                <KeyboardArrowRight />
-              )}
-              next
-            </Button>
-          }
-          backButton={
-            <Button
-              size="small"
-              onClick={handleBack}
-              disabled={activeStep === 0}
-            >
-              {theme.direction === "rtl" ? (
-                <KeyboardArrowRight />
-              ) : (
-                <KeyboardArrowLeft />
-              )}
-              previous
-            </Button>
-          }
-        />
+         
           </div>
         </div>
       </div>
