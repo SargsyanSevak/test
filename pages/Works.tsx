@@ -73,7 +73,7 @@ export default function DotsMobileStepper() {
                   key={i}
                   className={`${
                     activeStep == el.step ? "bg-teal-400" : "bg-white"
-                  } w-1 h-16  transition-all cursor-pointer`}
+                  } w-1 h-16  transition-all cursor-pointer hover:bg-teal-200`}
                   onClick={() => setActiveStep(el.step)}
                 ></li>
               ))}
@@ -124,7 +124,7 @@ export default function DotsMobileStepper() {
                     key={i}
                     className={`${
                       activeStep == el.step ? "bg-teal-400" : "bg-white"
-                    } w-1 h-10  transition-all cursor-pointer`}
+                    } w-1 h-10  transition-all cursor-pointer hover:bg-teal-200`}
                     onClick={() => setActiveStep(el.step)}
                   ></li>
                 ))}
