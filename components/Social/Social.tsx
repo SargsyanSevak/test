@@ -3,7 +3,7 @@ import Link from "next/link";
 import { FaFacebookF, FaLinkedinIn, FaGithub, FaWhatsapp } from "react-icons/fa";
 const Social = () => {
   return (
-    <div className="fixed right-10 bottom-6 social">
+    <div className="hidden md:block fixed right-10 bottom-6 social anim">
       <ul className="flex flex-col gap-8 text-white text-60">
         <li>
           <Link href={"https://google.com"} target="_blank" className="hover:text-teal-400 transition-all">

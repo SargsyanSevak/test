@@ -3,7 +3,10 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import Layout from "@/components/layout/Layout";
 import { useEffect } from "react";
+
+
 export default function App({ Component, pageProps }: AppProps) {
+  
   useEffect(() => {
     const threeScript = document.createElement("script");
     threeScript.setAttribute("id", "threeScript");
@@ -17,7 +20,9 @@ export default function App({ Component, pageProps }: AppProps) {
         threeScript.remove();
       }
     };
+
   }, []);
+  
   return (
     <Layout>
       <Head>
@@ -30,6 +35,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;300;400;700&display=swap" />
       </Head>
       <Component {...pageProps} />
+     
     </Layout>
   );
 }

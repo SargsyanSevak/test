@@ -18,8 +18,8 @@ const navList: NavProps[] = [
     href: "/About",
   },
   {
-    name: "Contact",
-    href: "/Contacts",
+    name: "Blog",
+    href: "/Blog",
   },
 ];
 const AsideMenu = () => {
@@ -47,7 +47,7 @@ const AsideMenu = () => {
         Sargsyan
       </span>
       <Link href="/" className="anim fixed top-0">
-        <Image src="/logo1.png" alt="logo" width={180} height={180} />
+        <Image src="/logo1.png" alt="logo" width={120} height={120} />
       </Link>
 
       <div className="border_right flex justify-center items-center "></div>

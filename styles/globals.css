@@ -13,7 +13,9 @@ body{
   max-width: 100%;
   position: relative;
   min-height: 100vh;
+ color: white;
 }
+
 .header{
   width: 1536px;
   max-width: 100%;
@@ -139,11 +141,10 @@ main{
     display: none;
   }
   .content{
-    padding: 20px;
-    padding-top: 80px;
+   
   }
   .container{
-    padding-left: 10px;
+    padding-left: 0px;
   }
 }
 @media (min-height: 400px) {
@@ -250,3 +251,10 @@ main{
     filter: blur(0);
   }
 }
+
+.title {
+  font-size: 10rem;
+}
+
+
+

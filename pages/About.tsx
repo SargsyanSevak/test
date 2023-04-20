@@ -8,7 +8,7 @@ const About = () => {
         <title>About</title>
         <meta name="description" content="sargsyan" />
       </Head>
-      <div id="globe" >
+      <div id="globe" className='cursor'>
         <div className="container anim span_group">
         
   <span>There</span>
