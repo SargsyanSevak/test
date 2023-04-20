@@ -8,7 +8,7 @@ const Content = () => {
       <div className="container h-4/4 flex flex-col justify-center items-start gap-6 text-white anim ">
         <span className="text-7xl font-bold pl-2 md:pl-0">Hi there</span>
         <span className="text-7xl font-bold pl-2 md:pl-0">
-          I am <span className="text-teal-400">Sevak</span>{" "}
+        I&rsquo;m  <span className="text-teal-400">Sevak</span>{" "}
         </span>
         <p className="span_group pr-4 md:pr-0">
           <span>A well</span>
