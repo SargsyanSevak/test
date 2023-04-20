@@ -104,9 +104,9 @@ export default function DotsMobileStepper() {
             Discover +
           </Button>
           </div>
-          <div className="title w-4/4 h-20 flex justify-center items-center md:hidden">
+          <div className="w-4/4 h-20 flex justify-center items-center md:hidden">
           <MobileStepper
-          className="bg-inherit"
+          className="bg-inherit h-screen flex md:hidden flex-col w-20 justify-evenly items-center text-white"
           variant="dots"
           steps={6}
           position="static"
