@@ -107,19 +107,37 @@ export default function DotsMobileStepper() {
             </Button>
           </div>
 
-          <div className="  w-4/4 h-20 flex justify-center items-center md:hidden">
-            <div className=" h-6 w-52 flex flex-row justify-center items-center">
-              <ul className="transition-both rotate-90">
+          <div className="reletive  w-4/4 h-40 flex justify-center items-center md:hidden pt-20">
+            <div className=" w-50 flex flex-row-reverse justify-center items-center">
+              <button
+                onClick={handleBack}
+                disabled={activeStep === 0 ? true : false}
+                className={`${
+                  activeStep === 0 ? "text-gray-400" : ""
+                } absolute left-8 font-bold`}
+              >
+                Back
+              </button>
+              <ul className="h-50 transition-both">
                 {portfolio.map((el, i) => (
                   <li
                     key={i}
                     className={`${
-                      activeStep == el.step ? "bg-red-800" : "bg-white"
-                    } w-1 h-16  transition-all cursor-pointer`}
+                      activeStep == el.step ? "bg-teal-400" : "bg-white"
+                    } w-1 h-10  transition-all cursor-pointer`}
                     onClick={() => setActiveStep(el.step)}
                   ></li>
                 ))}
               </ul>
+              <button
+                onClick={handleNext}
+                disabled={activeStep === 5 ? true : false}
+                className={`${
+                  activeStep === 5 ? "text-gray-400" : ""
+                } absolute right-8 font-bold`}
+              >
+                Next
+              </button>
               {/* <div className="">
                 <button
                   onClick={handleBack}
