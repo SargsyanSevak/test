@@ -6,11 +6,11 @@ const Content = () => {
   return (
     <div className="content container h-screen flex ">
       <div className="container h-4/4 flex flex-col justify-center items-start gap-6 text-white anim ">
-        <span className="text-7xl font-bold">Hi there</span>
-        <span className="text-7xl font-bold">
+        <span className="text-7xl font-bold pl-2 md:pl-0">Hi there</span>
+        <span className="text-7xl font-bold pl-2 md:pl-0">
           I am <span className="text-teal-400">Sevak</span>{" "}
         </span>
-        <p className="span_group">
+        <p className="span_group pl-2 md:pl-0">
           <span>A well</span>
           <span> experienced </span>
           <span> UI/UX Designer</span>
@@ -30,7 +30,7 @@ const Content = () => {
           <span></span>
           <span></span>
         </p>
-        <div className="btn-group flex flex-row anim gap-4">
+        <div className="btn-group flex flex-row anim gap-4 pl-2 md:pl-0">
           <Link href={'/Works'}>
              <button className="button">Our Works</button>
           </Link>
