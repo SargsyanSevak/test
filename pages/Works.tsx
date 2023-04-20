@@ -2,6 +2,8 @@ import * as React from "react";
 import { useTheme } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import Head from "next/head";
+import anime from 'animejs';
+
 
 
 const portfolio = [
@@ -47,7 +49,32 @@ export default function DotsMobileStepper() {
   const handleBack = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
+  const waveRef = React.useRef(null);
 
+  React.useEffect(() => {
+    const waveAnimation = anime({
+      targets: waveRef.current,
+      translateX: [
+        { value: -20, duration: 1000, easing: 'easeInOutSine' },
+        { value: 20, duration: 1000, easing: 'easeInOutSine' },
+        { value: 0, duration: 1000, easing: 'easeInOutSine' },
+      ],
+      translateY: [
+        { value: 20, duration: 500, easing: 'easeInQuad' },
+        { value: -20, duration: 500, easing: 'easeOutQuad' },
+        { value: 0, duration: 1000, easing: 'easeInOutSine' },
+      ],
+      rotate: [
+        { value: 0, duration: 1000, easing: 'easeInOutSine' },
+        { value: 360, duration: 2000, easing: 'easeInOutSine' },
+      ],
+      loop: true,
+    });
+
+    return () => waveAnimation.pause();
+  }, []);
+
+ 
   return (
     <section className="content">
       
@@ -93,7 +120,8 @@ export default function DotsMobileStepper() {
             </p>
           </div>
           <div className="portfolio-body w-4/4 h-72 md:h-96 flex justify-center items-center overflow-hidden">
-            <img
+            <img id='wave'
+             ref={waveRef}
               src={portfolio[activeStep].url}
               alt={portfolio[activeStep].name}
               width={600}
