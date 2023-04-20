@@ -72,7 +72,7 @@ export default function DotsMobileStepper() {
                 <li
                   key={i}
                   className={`${
-                    activeStep == el.step ? "bg-red-800" : "bg-white"
+                    activeStep == el.step ? "bg-teal-400" : "bg-white"
                   } w-1 h-16  transition-all cursor-pointer`}
                   onClick={() => setActiveStep(el.step)}
                 ></li>
