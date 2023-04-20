@@ -55,15 +55,8 @@ const ContactMe = () => {
   return (
     <>
       <div className="contact-me-container">
-        <div className="open fixed right-4 top-4 md:right-10">
-          <Button
-            variant="text"
-            startIcon={<CallIcon />}
-            className="text-white btn_text"
-            onClick={() => setOwnWidth(true)}
-          >
-            Contact
-          </Button>
+        <div className="open fixed right-4 top-3 md:right-10">
+          <button className="button " onClick={() => setOwnWidth(true)}>Contact</button>
         </div>
       </div>
 
@@ -88,7 +81,7 @@ const ContactMe = () => {
           <h4 className="text-xl text-teal-400 font-bold">
             Have you any <span className="text-black"> questions?</span>
           </h4>
-          <h6 className="font-bold">
+          <h6 className="font-bold text-black">
             I am at your <span className="text-teal-400">services</span>{" "}
           </h6>
         </div>
@@ -107,6 +100,7 @@ const ContactMe = () => {
             activeStep={activeStep}
             nextButton={
               <Button
+                color="success"
                 size="small"
                 onClick={handleNext}
                 disabled={activeStep === maxSteps - 1}
@@ -121,6 +115,7 @@ const ContactMe = () => {
             }
             backButton={
               <Button
+              color="success"
                 size="small"
                 onClick={handleBack}
                 disabled={activeStep === 0}

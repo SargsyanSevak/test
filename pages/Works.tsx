@@ -1,11 +1,9 @@
 import * as React from "react";
 import { useTheme } from "@mui/material/styles";
-import MobileStepper from "@mui/material/MobileStepper";
 import Button from "@mui/material/Button";
-import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
-import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 import Head from "next/head";
-import Image from "next/image";
+
+
 const portfolio = [
   {
     step: 0,
@@ -39,7 +37,7 @@ const portfolio = [
   },
 ];
 export default function DotsMobileStepper() {
-  const theme = useTheme();
+  
   const [activeStep, setActiveStep] = React.useState(0);
 
   const handleNext = () => {
@@ -52,6 +50,7 @@ export default function DotsMobileStepper() {
 
   return (
     <section className="content">
+      
       <Head>
         <title>My Works</title>
         <meta name="description" content="sargsyan" />
@@ -102,9 +101,7 @@ export default function DotsMobileStepper() {
             />
           </div>
           <div className="discover-btn  w-4/4 h-20 flex justify-center items-center">
-            <Button variant="text" className="text-white btn_text">
-              Discover +
-            </Button>
+            <button className="button"> Discover +</button>
           </div>
 
           <div className="reletive  w-4/4 h-40 flex justify-center items-center md:hidden pt-20">
@@ -114,7 +111,7 @@ export default function DotsMobileStepper() {
                 disabled={activeStep === 0 ? true : false}
                 className={`${
                   activeStep === 0 ? "text-gray-400" : ""
-                } absolute left-8 font-bold`}
+                } absolute left-8 font-bold button`}
               >
                 Back
               </button>
@@ -134,28 +131,11 @@ export default function DotsMobileStepper() {
                 disabled={activeStep === 5 ? true : false}
                 className={`${
                   activeStep === 5 ? "text-gray-400" : ""
-                } absolute right-8 font-bold`}
+                } absolute right-8 font-bold button`}
               >
                 Next
               </button>
-              {/* <div className="">
-                <button
-                  onClick={handleBack}
-                  disabled={activeStep === 0 ? true : false}
-                  className={`${
-                    activeStep === 0 ? "text-gray-400" : ""
-                  } `}
-                >
-                  Next
-                </button>
-                <button
-                  onClick={handleNext}
-                  disabled={activeStep === 5 ? true : false}
-                  className={`${activeStep === 5 ? "text-gray-400" : ""} `}
-                >
-                  Previous
-                </button>
-              </div> */}
+              
             </div>
           </div>
         </div>

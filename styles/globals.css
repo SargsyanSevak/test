@@ -271,5 +271,32 @@ main{
   font-size: 10rem;
 }
 
+.button {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: none;
+  background: none;
+  font-size: 14px;
+  line-height: 42px;
+}
 
+.button::before {
+  margin-left: auto;
+}
 
+.button::after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: white;
+  display: block;
+
+  transition: 0.3s;
+}
+
+.button:hover::after, .button:hover::before {
+  width: 100%;
+}

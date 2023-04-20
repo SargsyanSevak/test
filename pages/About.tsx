@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Head from 'next/head'
+
 const About = () => {
   return (
     <section className='content'>
@@ -31,9 +32,9 @@ const About = () => {
   <span>thinking.</span>
 
         </div>
-        
+      
       </div>
-        
+      
     </section>
   )
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import SvgImage from "../Bg/SvgImage";
 import Button from "@mui/material/Button";
-
+import Link from 'next/link'
 const Content = () => {
   return (
     <div className="content container h-screen flex ">
@@ -29,16 +29,14 @@ const Content = () => {
           <span></span>
           <span></span>
           <span></span>
-             
-          
         </p>
-        <div className="btn-group flex flex-row anim">
-          <Button variant="text" className="text-white btn_text">
-            Our Work
-          </Button>
-          <Button variant="text" className="text-white btn_text">
-            About Us
-          </Button>
+        <div className="btn-group flex flex-row anim gap-4">
+          <Link href={'/Works'}>
+             <button className="button">Our Works</button>
+          </Link>
+         <Link href={'/About'}>
+           <button className="button">About Us</button>
+         </Link>
         </div>
       </div>
       <div className="item container h-4/4 hidden md:flex flex-col justify-center items-end anim">
