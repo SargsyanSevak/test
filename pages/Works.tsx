@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Head from "next/head";
 
 const portfolio = [
@@ -35,47 +35,26 @@ const portfolio = [
 ];
 export default function DotsMobileStepper() {
   const [activeStep, setActiveStep] = React.useState(0);
-  const [wheelDelta, setWheelDelta] = useState(0);
+
+  let slideSound: HTMLAudioElement;
+
+  if (typeof Audio !== "undefined") {
+    slideSound = new Audio("/change.mp3");
+  }
   const handleNext = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
+    slideSound.play();
+    setTimeout(() => {
+      setActiveStep((prevActiveStep) => prevActiveStep + 1);
+    }, 400);
   };
 
   const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
+    slideSound.play();
+    setTimeout(() => {
+      setActiveStep((prevActiveStep) => prevActiveStep - 1);
+    }, 400);
   };
 
-  const handleWheel = (event: any) => {
-    setWheelDelta(event.deltaY);
-  };
-
-  const handleTouchMove = (event: any) => {
-    const touch = event.touches[0];
-    setWheelDelta(touch.pageY - event.targetTouches[0].pageY);
-  };
-
-  useEffect(() => {
-    window.addEventListener("mousewheel", handleWheel);
-    window.addEventListener("touchstart", handleTouchMove);
-    window.addEventListener("touchmove", handleTouchMove);
-    return () => {
-      window.removeEventListener("mousewheel", handleWheel);
-      window.removeEventListener("touchstart", handleTouchMove);
-      window.removeEventListener("touchmove", handleTouchMove);
-    };
-  }, []);
-
-  useEffect(() => {
-    const direction = wheelDelta > 0 ? "down" : "up";
-    if (direction === "down") {
-      setTimeout(() => {
-        setActiveStep(Math.min(activeStep + 1, portfolio.length - 1));
-      }, 1000);
-    } else {
-      setTimeout(() => {
-        setActiveStep(Math.max(activeStep - 1, 0));
-      }, 1000);
-    }
-  }, [wheelDelta]);
   return (
     <section className="content">
       <Head>
@@ -100,7 +79,12 @@ export default function DotsMobileStepper() {
                   className={`${
                     activeStep == el.step ? "bg-teal-400" : "bg-white"
                   } w-1 h-16  transition-all cursor-pointer hover:bg-teal-200`}
-                  onClick={() => setActiveStep(el.step)}
+                  onClick={() => {
+                    slideSound.play();
+                    setTimeout(() => {
+                      setActiveStep(el.step);
+                    }, 400);
+                  }}
                 ></li>
               ))}
             </ul>
@@ -149,7 +133,12 @@ export default function DotsMobileStepper() {
                     className={`${
                       activeStep == el.step ? "bg-teal-400" : "bg-white"
                     } w-1 h-10  transition-all cursor-pointer hover:bg-teal-200`}
-                    onClick={() => setActiveStep(el.step)}
+                    onClick={() => {
+                      slideSound.play();
+                      setTimeout(() => {
+                        setActiveStep(el.step);
+                      }, 400);
+                    }}
                   ></li>
                 ))}
               </ul>
