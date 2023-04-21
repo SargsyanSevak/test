@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import { motion } from "framer-motion";
+import DiscoverBtn from "@/components/UI/DiscoverBtn/DiscoverBtn";
 const portfolio = [
   {
     step: 0,
@@ -128,7 +129,8 @@ export default function DotsMobileStepper() {
             </motion.div>
           </div>
           <div className="discover-btn  w-4/4 h-20 flex justify-center items-center">
-            <button className="button"> Discover +</button>
+            {/* <button className="button"> Discover +</button> */}
+            <DiscoverBtn/>
           </div>
 
           <div className="reletive  w-4/4 h-40 flex justify-center items-center md:hidden pt-20">

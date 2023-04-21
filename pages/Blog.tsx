@@ -1,3 +1,4 @@
+import DiscoverBtn from "@/components/UI/DiscoverBtn/DiscoverBtn";
 import Head from "next/head";
 import React from "react";
 
@@ -8,7 +9,10 @@ export default function Blog() {
         <title>Blog</title>
         <meta name="description" content="sargsyan" />
       </Head>
-      BLOG
+      
+        <DiscoverBtn/>
+      
+      
     </section>
   );
 }
