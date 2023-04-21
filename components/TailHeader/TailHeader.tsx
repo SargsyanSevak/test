@@ -18,8 +18,8 @@ const navigation: NavProps[] = [
     href: "/About",
   },
   {
-    name: "Contact",
-    href: "/Contacts",
+    name: "Blog",
+    href: "/Blog",
   },
 ];
 export default function TailHeader() {

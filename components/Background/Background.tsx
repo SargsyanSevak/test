@@ -4,8 +4,6 @@ import { loadFull } from "tsparticles";
 import ContactMe from "../ContactMe/ContactMe";
 import Social from "../Social/Social";
 
-
-
 const Background = () => {
   const particlesInit = useCallback(async (engine: any) => {
     await loadFull(engine);

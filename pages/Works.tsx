@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import { motion } from "framer-motion";
 import DiscoverBtn from "@/components/UI/DiscoverBtn/DiscoverBtn";
+
 const portfolio = [
   {
     step: 0,
@@ -106,7 +107,7 @@ export default function DotsMobileStepper() {
           </div>
           <div className="portfolio-body w-4/4 h-72 md:h-96 flex justify-center items-center overflow-hidden">
             <motion.div
-              className="flex justify-center items-center "
+              className="reletive flex justify-center items-center "
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{
