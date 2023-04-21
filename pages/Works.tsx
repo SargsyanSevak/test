@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-
+import { motion } from "framer-motion";
 const portfolio = [
   {
     step: 0,
@@ -104,12 +104,28 @@ export default function DotsMobileStepper() {
             </p>
           </div>
           <div className="portfolio-body w-4/4 h-72 md:h-96 flex justify-center items-center overflow-hidden">
-            <img
-              src={portfolio[activeStep].url}
-              alt={portfolio[activeStep].name}
-              width={600}
-              height={500}
-            />
+            <motion.div
+              className="flex justify-center items-center "
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.3,
+                ease: [0, 0.71, 0.2, 1.01],
+                scale: {
+                  type: "spring",
+                  damping: 5,
+                  stiffness: 100,
+                  restDelta: 0.001,
+                },
+              }}
+            >
+              <img
+                src={portfolio[activeStep].url}
+                alt={portfolio[activeStep].name}
+                width={600}
+                height={500}
+              />
+            </motion.div>
           </div>
           <div className="discover-btn  w-4/4 h-20 flex justify-center items-center">
             <button className="button"> Discover +</button>

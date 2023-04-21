@@ -35,7 +35,6 @@ export default function App({ Component, pageProps }: AppProps) {
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;300;400;700&display=swap" />
       </Head>
       <Component {...pageProps} />
-     
     </Layout>
   );
 }
