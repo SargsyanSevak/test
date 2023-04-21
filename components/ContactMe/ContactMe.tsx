@@ -7,34 +7,26 @@ import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 import CallIcon from "@mui/icons-material/Call";
 import CloseIcon from "@mui/icons-material/Close";
 import Image from "next/image";
+import MyInput from "../UI/Input/Input";
+import TextArea from "../UI/TextArea/TextArea";
+
 const steps = [
   {
     label: "SEND A MESSAGE IN A BOTTLE",
     description: (
-      <textarea
-        placeholder="Type your message here ..."
-        className="w-60 h-20 border-y-2 border-x-2  text-sm  outline-none bg-inherit px-2 py-2"
-      />
+      <TextArea maxLength='200' placeholder='Type your message here...'/>
     ),
   },
   {
     label: "WE JUST NEED YOUR FULL NAME...",
     description: (
-      <input
-        type="text"
-        placeholder="Type your full name here ..."
-        className="w-60 text-sm px-4 py-4 outline-none bg-inherit border-y-2 border-x-2"
-      />
+      <MyInput maxLength={30} placeholder={'Type your full name here...'}/>
     ),
   },
   {
     label: "AND YOUR EMAIL ADDRESS.",
     description: (
-      <input
-        type="text"
-        placeholder="Type your e-mail address here ..."
-        className="w-60 text-sm px-4 py-4 outline-none bg-inherit border-y-2 border-x-2"
-      />
+      <MyInput maxLength={30} placeholder={'Type your e-mail address here...'}/>
     ),
   },
 ];
@@ -88,7 +80,7 @@ const ContactMe = () => {
         <div
           className={`contact-input h-1/2 flex flex-col justify-start md:justify-evenly items-center gap-6 md:gap-0`}
         >
-          <h3 className="font-bold text-black-500 py-8">
+          <h3 className="font-bold text-black py-8">
             {steps[activeStep].label}
           </h3>
           <div>{steps[activeStep].description}</div>
