@@ -1,6 +1,5 @@
 import React from "react";
 import SvgImage from "../Bg/SvgImage";
-import Button from "@mui/material/Button";
 import Link from 'next/link'
 const Content = () => {
   return (

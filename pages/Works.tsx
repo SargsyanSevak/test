@@ -1,8 +1,5 @@
-import * as React from "react";
-import { useTheme } from "@mui/material/styles";
-import Button from "@mui/material/Button";
+import React, { useEffect, useState } from "react";
 import Head from "next/head";
-
 
 const portfolio = [
   {
@@ -37,9 +34,8 @@ const portfolio = [
   },
 ];
 export default function DotsMobileStepper() {
-  
   const [activeStep, setActiveStep] = React.useState(0);
-
+  const [wheelDelta, setWheelDelta] = useState(0);
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
   };
@@ -48,9 +44,40 @@ export default function DotsMobileStepper() {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
+  const handleWheel = (event: any) => {
+    setWheelDelta(event.deltaY);
+  };
+
+  const handleTouchMove = (event: any) => {
+    const touch = event.touches[0];
+    setWheelDelta(touch.pageY - event.targetTouches[0].pageY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("mousewheel", handleWheel);
+    window.addEventListener("touchstart", handleTouchMove);
+    window.addEventListener("touchmove", handleTouchMove);
+    return () => {
+      window.removeEventListener("mousewheel", handleWheel);
+      window.removeEventListener("touchstart", handleTouchMove);
+      window.removeEventListener("touchmove", handleTouchMove);
+    };
+  }, []);
+
+  useEffect(() => {
+    const direction = wheelDelta > 0 ? "down" : "up";
+    if (direction === "down") {
+      setTimeout(() => {
+        setActiveStep(Math.min(activeStep + 1, portfolio.length - 1));
+      }, 1000);
+    } else {
+      setTimeout(() => {
+        setActiveStep(Math.max(activeStep - 1, 0));
+      }, 1000);
+    }
+  }, [wheelDelta]);
   return (
     <section className="content">
-      
       <Head>
         <title>My Works</title>
         <meta name="description" content="sargsyan" />
@@ -135,7 +162,6 @@ export default function DotsMobileStepper() {
               >
                 Next
               </button>
-              
             </div>
           </div>
         </div>
