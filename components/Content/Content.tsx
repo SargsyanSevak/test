@@ -1,5 +1,5 @@
 import React from "react";
-import SvgImage from "../Bg/SvgImage";
+import SvgImage from "../Svg/SvgImage";
 import Link from 'next/link'
 const Content = () => {
   return (

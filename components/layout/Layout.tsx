@@ -1,25 +1,20 @@
-import React, { ReactNode } from 'react'
-import AsideMenu from '../AsideMenu/AsideMenu'
-import Background from '../Background/Background'
-import MobileMenu from '../MobileMenu/MobileMenu'
-
+import React, { ReactNode } from "react";
+import AsideMenu from "../AsideMenu/AsideMenu";
+import Background from "../Background/Background";
+import TailHeader from "../TailHeader/TailHeader";
 
 interface LayoutProps {
-  children : ReactNode
+  children: ReactNode;
 }
-const Layout = ({children}:LayoutProps) => {
+const Layout = ({ children }: LayoutProps) => {
   return (
     <>
-    
-    <AsideMenu/>
-      <MobileMenu />
-      <Background/>
-        <main>
-          
-            {children}
-        </main>
+      <AsideMenu />
+      <TailHeader />
+      <Background />
+      <main>{children}</main>
     </>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

@@ -62,7 +62,7 @@ export default function DotsMobileStepper() {
         <meta name="description" content="sargsyan" />
       </Head>
 
-      <div className="container flex justify-around items-center">
+      <div className="container flex justify-around items-center anim">
         <div className="stepper h-screen w-52  hidden md:flex flex-col justify-center items-center gap-4">
           <button
             onClick={handleBack}
@@ -72,13 +72,13 @@ export default function DotsMobileStepper() {
             Previous
           </button>
           <div className="stepper-col bg-white w-1 h-96">
-            <ul className="transition-both">
+            <ul>
               {portfolio.map((el, i) => (
                 <li
                   key={i}
                   className={`${
                     activeStep == el.step ? "bg-teal-400" : "bg-white"
-                  } w-1 h-16  transition-all cursor-pointer hover:bg-teal-200`}
+                  } w-1 h-16 cursor-pointer hover:bg-teal-200 `}
                   onClick={() => {
                     slideSound.play();
                     setTimeout(() => {
