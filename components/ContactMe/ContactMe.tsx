@@ -12,19 +12,19 @@ import TextArea from "../UI/TextArea/TextArea";
 
 const steps = [
   {
-    label: "SEND A MESSAGE IN A BOTTLE",
+    label: ["SEND A MESSAGE","IN A BOTTLE"],
     description: (
       <TextArea maxLength='200' placeholder='Type your message here...'/>
     ),
   },
   {
-    label: "WE JUST NEED YOUR FULL NAME...",
+    label: ["WE JUST NEED YOUR" ,"FULL NAME"],
     description: (
       <MyInput maxLength={30} placeholder={'Type your full name here...'}/>
     ),
   },
   {
-    label: "AND YOUR EMAIL ADDRESS.",
+    label: ["AND YOUR", "EMAIL ADDRESS"],
     description: (
       <MyInput maxLength={30} placeholder={'Type your e-mail address here...'}/>
     ),
@@ -80,8 +80,9 @@ const ContactMe = () => {
         <div
           className={`contact-input h-1/2 flex flex-col justify-start md:justify-evenly items-center gap-6 md:gap-0`}
         >
-          <h3 className="font-bold text-teal-400 py-8">
-            {steps[activeStep].label}
+          <h3 className="font-bold text-white py-8">
+            <span>{steps[activeStep].label[0]}</span>
+            <span className="text-teal-400 pl-2">{steps[activeStep].label[1]}</span>
           </h3>
           <div>{steps[activeStep].description}</div>
           <MobileStepper
