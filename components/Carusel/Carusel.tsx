@@ -1,4 +1,5 @@
 import React from "react";
+import Image from 'next/image'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 
@@ -16,8 +17,7 @@ export default function MyCarusel({ activeStep,portfolio }: any) {
         return (
             
           <div key={i}>
-            <img src={el.url} />
-            
+            <Image src={el.url} width={200} height={100} alt={el.name}/>
           </div>
         );
       })}

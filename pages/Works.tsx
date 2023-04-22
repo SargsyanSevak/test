@@ -1,7 +1,6 @@
 import React from "react";
 import Head from "next/head";
 import { motion } from "framer-motion";
-import DiscoverBtn from "@/components/UI/DiscoverBtn/DiscoverBtn";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Link from "next/link";
 import Carusel from "@/components/Carusel/Carusel";
@@ -66,55 +65,70 @@ export default function DotsMobileStepper() {
         <meta name="description" content="sargsyan" />
       </Head>
 
-      <div className="container ">
-        <div className="  h-screen flex flex-col-reverse justify-center  md:flex-row md:justify-center ">
-          <div className="left  w-4/4 h-1/4 flex flex-col-reverse md:w-2/4 md:h-screen md:flex-row">
-            <div className="stepper  w-4/4 h-2/4 flex justify-center items-center md:w-1/4 md:h-screen">
-              <div className="stepper-item hidden md:flex flex-col justify-center items-center gap-2 ">
-                <button
-                  onClick={handleBack}
-                  disabled={activeStep === 0 ? true : false}
-                  className={`${activeStep === 0 ? "text-gray-400" : ""}`}
-                >
-                  Previous
-                </button>
-                <div className="stepper-col bg-white w-1 ">
-                  <ul>
-                    {portfolio.map((el, i) => (
-                      <li
-                        key={i}
-                        className={`${
-                          activeStep == el.step ? "bg-teal-400" : "bg-white"
-                        } w-1 h-16 cursor-pointer hover:bg-teal-200 `}
-                        onClick={() => {
-                          slideSound.play();
-                          setTimeout(() => {
-                            setActiveStep(el.step);
-                          }, 400);
-                        }}
-                      ></li>
-                    ))}
-                  </ul>
+      <div className="row-container works h-screen w-full ">
+        <div className="w-full h-full flex flex-col-reverse md:flex-row">
+          <div className=" w-full h-screen md:w-3/5">
+            <div className="container  h-full w-full flex flex-col-reverse md:flex-row">
+              <div className=" steeper w-full h-full  md:w-2/5">
+                <div className="mobile-steeper-container w-full h-full block md:hidden">
+                  <div className="mobile-steeper h-1/2  flex justify-center items-center">
+                    <ul className="steeper-col h-1 w-full  bg-white flex">
+                      {portfolio.map((el, i) => {
+                        return (
+                          <li
+                            key={i}
+                            className={`${
+                              activeStep == el.step ? "bg-teal-400" : "bg-white"
+                            } w-1/5 h-1 cursor-pointer`}
+                            onClick={() => {
+                              slideSound.play();
+                              setTimeout(() => {
+                                setActiveStep(el.step);
+                              }, 400);
+                            }}
+                          ></li>
+                        );
+                      })}
+                    </ul>
+                  </div>
+                  <div className="steeper-btns h-1/2 flex justify-between items-start">
+                    <button
+                      onClick={handleBack}
+                      disabled={activeStep === 0 ? true : false}
+                      className={`${
+                        activeStep === 0 ? "text-gray-400" : "text-white"
+                      } font-bold button`}
+                    >
+                      Back
+                    </button>
+                    <button
+                      onClick={handleNext}
+                      disabled={activeStep === 4 ? true : false}
+                      className={`${
+                        activeStep === 4 ? "text-gray-400" : ""
+                      } font-bold button`}
+                    >
+                      Next
+                    </button>
+                  </div>
                 </div>
-                <button
-                  onClick={handleNext}
-                  disabled={activeStep === 4 ? true : false}
-                  className={`${activeStep === 4 ? "text-gray-400" : ""}`}
-                >
-                  Next
-                </button>
-              </div>
 
-              <div className="steeper-col w-screen h-4/4 flex flex-col justify-between gap-4 md:hidden">
-                <div className="steeper-col h-10 w-4/4 flex justify-center items-center px-4">
-                  <ul className="steeper-col h-1 w-full  bg-white flex">
-                    {portfolio.map((el, i) => {
-                      return (
+                <div className=" w-full h-full hidden md:flex flex-col justify-center items-center gap-2">
+                  <button
+                    onClick={handleBack}
+                    disabled={activeStep === 0 ? true : false}
+                    className={`${activeStep === 0 ? "text-gray-400" : ""}`}
+                  >
+                    Previous
+                  </button>
+                  <div className="h-3/5">
+                    <ul className="stepper-col bg-white w-1 h-full">
+                      {portfolio.map((el, i) => (
                         <li
                           key={i}
                           className={`${
                             activeStep == el.step ? "bg-teal-400" : "bg-white"
-                          } w-1/5 h-1 cursor-pointer`}
+                          } w-1 h-1/5 cursor-pointer hover:bg-teal-200 `}
                           onClick={() => {
                             slideSound.play();
                             setTimeout(() => {
@@ -122,187 +136,55 @@ export default function DotsMobileStepper() {
                             }, 400);
                           }}
                         ></li>
-                      );
-                    })}
-                  </ul>
-                </div>
-                <div className="steeper-btns  h-10 w-4/4 flex justify-between items-center p-4">
-                  <button
-                    onClick={handleBack}
-                    disabled={activeStep === 0 ? true : false}
-                    className={`${
-                      activeStep === 0 ? "text-gray-400" : "text-white"
-                    } font-bold button`}
-                  >
-                    Back
-                  </button>
+                      ))}
+                    </ul>
+                  </div>
                   <button
                     onClick={handleNext}
                     disabled={activeStep === 4 ? true : false}
-                    className={`${
-                      activeStep === 4 ? "text-gray-400" : ""
-                    } font-bold button`}
+                    className={`${activeStep === 4 ? "text-gray-400" : ""}`}
                   >
                     Next
                   </button>
                 </div>
               </div>
-            </div>
-            <div className="w-full stepper-description pl-4 flex flex-col gap-4  justify-center items-start md:w-3/4 md:h-screen md:gap-8 md:pl-0">
-              <span className="text-teal-400 font-bold ">
-                0{portfolio[activeStep].step + 1}
-              </span>
-              <h2 className="text-white font-bold text-4xl leading-8 bruno-style">
-                {" "}
-                {portfolio[activeStep].name}
-              </h2>
-              <Link href={portfolio[activeStep].href || {}} target="_blank">
-                <button className="button"> Discover +</button>
-              </Link>
+              <div className="portfolio-description w-full h-full flex flex-col justify-center items-start gap-6">
+                <span className="text-teal-400 font-bold ">
+                  0{portfolio[activeStep].step + 1}
+                </span>
+                <h2 className="text-white font-bold text-4xl leading-8 bruno-style ">
+                  {" "}
+                  {portfolio[activeStep].name}
+                </h2>
+                <Link href={portfolio[activeStep].href || {}} target="_blank">
+                  <button className="button"> Discover +</button>
+                </Link>
+              </div>
             </div>
           </div>
-
-          <div className="right  w-4/4 h-2/4 flex justify-center items-center md:w-3/4 md:h-screen">
-            <motion.div
-              className="reletive flex justify-center items-center px-4"
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 0.3,
-                ease: [0, 0.71, 0.2, 1.01],
-                scale: {
-                  type: "spring",
-                  damping: 5,
-                  stiffness: 100,
-                  restDelta: 0.001,
-                },
-              }}
-            >
-              <Carusel activeStep={activeStep} portfolio={portfolio} />
-            </motion.div>
+          <div className=" w-full h-screen md:w-4/5">
+            <div className=" w-full flex justify-center h-full md:w-4/5">
+              <motion.div
+                className="reletive flex justify-center items-center"
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{
+                  duration: 0.3,
+                  ease: [0, 0.71, 0.2, 1.01],
+                  scale: {
+                    type: "spring",
+                    damping: 5,
+                    stiffness: 100,
+                    restDelta: 0.001,
+                  },
+                }}
+              >
+                <Carusel activeStep={activeStep} portfolio={portfolio} />
+              </motion.div>
+            </div>
           </div>
         </div>
       </div>
-      {/* <div className="container flex justify-around items-center anim">
-        <div className="stepper h-screen w-52  hidden md:flex flex-col justify-center items-center gap-4 ">
-          <button
-            onClick={handleBack}
-            disabled={activeStep === 0 ? true : false}
-            className={`${activeStep === 0 ? "text-gray-400" : ""}`}
-          >
-            Previous
-          </button>
-          <div className="stepper-col bg-white w-1 h-96">
-            <ul>
-              {portfolio.map((el, i) => (
-                <li
-                  key={i}
-                  className={`${
-                    activeStep == el.step ? "bg-teal-400" : "bg-white"
-                  } w-1 h-16 cursor-pointer hover:bg-teal-200 `}
-                  onClick={() => {
-                    slideSound.play();
-                    setTimeout(() => {
-                      setActiveStep(el.step);
-                    }, 400);
-                  }}
-                ></li>
-              ))}
-            </ul>
-          </div>
-          <button
-            onClick={handleNext}
-            disabled={activeStep === 5 ? true : false}
-            className={`${activeStep === 5 ? "text-gray-400" : ""}`}
-          >
-            Next
-          </button>
-        </div>
-        <div className="portfolio w-screen  md:w-3/4 h-screen  flex flex-col justify-center">
-          <div className="title w-4/4 h-20 flex justify-center items-center ">
-            <p className="text-2xl md:text-4xl font-bold tracking-wide">
-              <span className="text-teal-400 pr-4 text-lg">
-                0{portfolio[activeStep].step + 1}.
-              </span>
-              {portfolio[activeStep].name}
-            </p>
-          </div>
-          <div className="portfolio-body w-4/4 h-72 md:h-96 flex justify-center items-center overflow-hidden ">
-            <motion.div
-              className="reletive flex justify-center items-center "
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 0.3,
-                ease: [0, 0.71, 0.2, 1.01],
-                scale: {
-                  type: "spring",
-                  damping: 5,
-                  stiffness: 100,
-                  restDelta: 0.001,
-                },
-              }}
-            >
-              <img
-                src={portfolio[activeStep].url}
-                alt={portfolio[activeStep].name}
-                width={600}
-                height={500}
-              />
-            </motion.div>
-          </div>
-          <div className="discover-btn  w-4/4 h-28 flex justify-center items-center ">
-            {matches ? (
-              <Link href={portfolio[activeStep].href || {}} target="_blank">
-                <button className="button"> Discover +</button>
-              </Link>
-            ) : (
-              <Link href={portfolio[activeStep].href || {}} target="_blank">
-                <DiscoverBtn />
-              </Link>
-            )}
-          </div>
-
-          <div className="reletive  w-4/4 h-40 flex justify-center items-center md:hidden pt-20 ">
-            <div className=" w-50 flex flex-row-reverse justify-center items-center">
-              <button
-                onClick={handleBack}
-                disabled={activeStep === 0 ? true : false}
-                className={`${
-                  activeStep === 0 ? "text-gray-400" : ""
-                } absolute left-8 font-bold button`}
-              >
-                Back
-              </button>
-              <ul className="h-50 transition-both">
-                {portfolio.map((el, i) => (
-                  <li
-                    key={i}
-                    className={`${
-                      activeStep == el.step ? "bg-teal-400" : "bg-white"
-                    } w-1 h-10  transition-all cursor-pointer hover:bg-teal-200`}
-                    onClick={() => {
-                      slideSound.play();
-                      setTimeout(() => {
-                        setActiveStep(el.step);
-                      }, 400);
-                    }}
-                  ></li>
-                ))}
-              </ul>
-              <button
-                onClick={handleNext}
-                disabled={activeStep === 5 ? true : false}
-                className={`${
-                  activeStep === 5 ? "text-gray-400" : ""
-                } absolute right-8 font-bold button`}
-              >
-                Next
-              </button>
-            </div>
-          </div>
-        </div>
-      </div> */}
     </section>
   );
 }
