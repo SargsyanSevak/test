@@ -86,7 +86,7 @@ const ContactMe = () => {
           </h3>
           <div>{steps[activeStep].description}</div>
           <MobileStepper
-            className="gap-12"
+            className="gap-12 rounded-xl"
             variant="text"
             steps={maxSteps}
             position="static"
