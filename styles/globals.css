@@ -327,7 +327,7 @@ main {
   outline: none;
   padding: 10px;
   padding-right: 70px;
-  border: 2px solid #333;
+  border: 2px solid #ccc;
   width: 300px;
 }
 .input-container textarea {
@@ -339,6 +339,7 @@ main {
   border: 2px solid #333;
   width: 300px;
   color: black;
+  border: 2px solid #ccc;
   border-radius: 12px;
   font-size: 14px;
 }
