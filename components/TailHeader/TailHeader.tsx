@@ -24,7 +24,7 @@ const navigation: NavProps[] = [
 ];
 export default function TailHeader() {
   return (
-    <div className="fixed top-0 right-0 left-0 z-50">
+    <div className="fixed top-0 right-0 left-0 z-30">
       <Disclosure as="nav" className="md:hidden mobile_menu">
         {({ open }) => (
           <>

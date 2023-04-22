@@ -30,6 +30,9 @@ main {
   height: 100vh;
   padding-left: 90px;
 }
+.container{
+  padding-left: 60px;
+}
 .nav_item_container {
   width: 95px;
   display: flex;
@@ -50,7 +53,10 @@ main {
   font-family: 'Bruno Ace', cursive;
 
 }
-  
+.contact-me-container{
+  z-index: 1100;
+}
+
 #tsparticles {
   position: absolute;
   left: 0;

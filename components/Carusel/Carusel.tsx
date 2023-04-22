@@ -5,7 +5,7 @@ import { Carousel } from "react-responsive-carousel";
 
 export default function MyCarusel({ activeStep,portfolio }: any) {
   return (
-    <Carousel
+    <Carousel 
       autoPlay={false}
       showArrows={false}
       showIndicators={false}

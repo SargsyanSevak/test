@@ -3,7 +3,7 @@ import SvgImage from "../Svg/SvgImage";
 import Link from 'next/link'
 const Content = () => {
   return (
-    <div className="content container h-screen flex ">
+    <div className="content container h-screen flex">
       <div className="container h-4/4 flex flex-col justify-center items-start gap-6 text-white anim ">
         <span className="text-7xl font-bold pl-2 md:pl-0">Hi there</span>
         <span className="text-7xl font-bold pl-2 md:pl-0">

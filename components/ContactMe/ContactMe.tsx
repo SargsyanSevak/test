@@ -4,11 +4,11 @@ import MobileStepper from "@mui/material/MobileStepper";
 import Button from "@mui/material/Button";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
-import CallIcon from "@mui/icons-material/Call";
 import CloseIcon from "@mui/icons-material/Close";
 import Image from "next/image";
 import MyInput from "../UI/Input/Input";
 import TextArea from "../UI/TextArea/TextArea";
+
 
 const steps = [
   {
@@ -47,17 +47,17 @@ const ContactMe = () => {
   return (
     <>
       <div className="contact-me-container">
-        <div className="open fixed right-4 top-3 md:right-10">
+        <div className="open absolute right-4 top-4 z-50 md:right-10">
           <button className="button " onClick={() => setOwnWidth(true)}>Contact</button>
         </div>
       </div>
 
       <div
-        className={`bg-white contact-me h-screen fixed right-0 top-0 bottom-0 z-50  ${
+        className={`bg-white contact-me h-screen fixed right-0 top-0 bottom-0 z-40  ${
           ownWidth ? "w-80" : "hidden"
         }`}
       >
-        <div className="contact_title h-1/6 pt-4 pl-2 absolute">
+        <div className="contact_title h-1/6 pt-4 pl-2 absolute ">
           <Button
             variant="text"
             color="success"
