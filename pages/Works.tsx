@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import { motion } from "framer-motion";
 import DiscoverBtn from "@/components/UI/DiscoverBtn/DiscoverBtn";
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const portfolio = [
   {
@@ -37,7 +38,7 @@ const portfolio = [
 ];
 export default function DotsMobileStepper() {
   const [activeStep, setActiveStep] = React.useState(0);
-
+  const matches = useMediaQuery('(max-width:760px)');
   let slideSound: HTMLAudioElement;
 
   if (typeof Audio !== "undefined") {
@@ -129,9 +130,10 @@ export default function DotsMobileStepper() {
               />
             </motion.div>
           </div>
-          <div className="discover-btn  w-4/4 h-20 flex justify-center items-center">
-            {/* <button className="button"> Discover +</button> */}
-            <DiscoverBtn/>
+          <div className="discover-btn  w-4/4 h-28 flex justify-center items-center">
+            {matches ?   <button className="button"> Discover +</button> :  <DiscoverBtn/>}
+          
+           
           </div>
 
           <div className="reletive  w-4/4 h-40 flex justify-center items-center md:hidden pt-20">
