@@ -12,6 +12,7 @@ export default function MyCarusel({setActiveStep, activeStep,portfolio }: any) {
       showThumbs={false}
       showStatus={false}
       selectedItem={activeStep}
+      emulateTouch={true}
       onChange={(e:number)=>{
         setActiveStep(e)
       }}
