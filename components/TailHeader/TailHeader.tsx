@@ -2,8 +2,8 @@ import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { NavProps } from "@/interfaces/interfaces";
 import Link from "next/link";
-import Social from "../Social/Social";
-import Image from 'next/image'
+import { motion } from "framer-motion";
+import Image from "next/image";
 const navigation: NavProps[] = [
   {
     name: "Home",
@@ -35,22 +35,28 @@ export default function TailHeader() {
                   <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-teal-400 hover:bg-teal-600 hover:text-white transition-all">
                     <span className="sr-only">Open main menu</span>
                     {open ? (
-                      <XMarkIcon className="block h-10 w-10" aria-hidden="true" />
+                      <XMarkIcon
+                        className="block h-10 w-10"
+                        aria-hidden="true"
+                      />
                     ) : (
-                      <Bars3Icon className="block h-10 w-10" aria-hidden="true" />
+                      <Bars3Icon
+                        className="block h-10 w-10"
+                        aria-hidden="true"
+                      />
                     )}
                   </Disclosure.Button>
                 </div>
                 <div className="flex flex-1 items-center justify-center md:hidden">
                   <div className="flex flex-shrink-0 justify-center items-center h-20">
-                    <Link href='/'>
+                    <Link href="/">
                       <Image
-                      className="h-16 w-auto pb-2"
-                      src="/logo.png"
-                      alt="Your Company"
-                      width={150}
-                      height={150}
-                    />
+                        className="h-16 w-auto pb-2"
+                        src="/logo.png"
+                        alt="Your Company"
+                        width={150}
+                        height={150}
+                      />
                     </Link>
                   </div>
                 </div>
@@ -59,13 +65,30 @@ export default function TailHeader() {
             <Disclosure.Panel className="md:hidden">
               <div className="space-y-1 px-2 pb-3 pt-2">
                 {navigation.map((item) => (
-                  <Link
-                    href={item.href}
-                    key={item.name}
-                    className="block rounded-md px-3 py-2 text-base font-medium text-white"
+                  <motion.div
+                  key={item.name}
+                    className="box"
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{
+                      duration: 0.3,
+                      ease: [0, 0.71, 0.2, 1.01],
+                      scale: {
+                        type: "spring",
+                        damping: 5,
+                        stiffness: 100,
+                        restDelta: 0.001,
+                      },
+                    }}
                   >
-                    {item.name}
-                  </Link>
+                    <Link
+                      href={item.href}
+                      key={item.name}
+                      className="block rounded-md px-3 py-2 text-base font-medium text-white mobile-menu-anim"
+                    >
+                      {item.name}
+                    </Link>
+                  </motion.div>
                 ))}
               </div>
             </Disclosure.Panel>

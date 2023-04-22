@@ -50,8 +50,8 @@ main {
   position: relative;
   background: linear-gradient(90deg, #120952 10%, #0f4061 100%);
   border-bottom: dashed #0f4061;
+ 
 }
-
 
 .bruno-style{
   font-family: 'Bruno Ace', cursive;
