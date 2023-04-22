@@ -4,6 +4,12 @@ import { NavProps } from "@/interfaces/interfaces";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import {
+  FaFacebookF,
+  FaLinkedinIn,
+  FaGithub,
+  FaWhatsapp,
+} from "react-icons/fa";
 const navigation: NavProps[] = [
   {
     name: "Home",
@@ -63,10 +69,10 @@ export default function TailHeader() {
               </div>
             </div>
             <Disclosure.Panel className="md:hidden">
-              <div className="space-y-1 px-2 pb-3 pt-2">
+              <div className="  pb-6 pt-2 flex justify-around w-full ">
                 {navigation.map((item) => (
                   <motion.div
-                  key={item.name}
+                    key={item.name}
                     className="box"
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -90,6 +96,46 @@ export default function TailHeader() {
                     </Link>
                   </motion.div>
                 ))}
+              </div>
+              <div className="w-full h-20 ">
+                <ul className="w-full h-20 flex justify-around items-center text-2xl">
+                  <li>
+                    <Link
+                      href={"https://google.com"}
+                      target="_blank"
+                      className="hover:text-teal-400 transition-all"
+                    >
+                      <FaFacebookF />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href={"https://google.com"}
+                      target="_blank"
+                      className="hover:text-teal-400 transition-all"
+                    >
+                      <FaLinkedinIn />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href={"https://google.com"}
+                      target="_blank"
+                      className="hover:text-teal-400 transition-all"
+                    >
+                      <FaGithub />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href={"https://google.com"}
+                      target="_blank"
+                      className="hover:text-teal-400 transition-all"
+                    >
+                      <FaWhatsapp />
+                    </Link>
+                  </li>
+                </ul>
               </div>
             </Disclosure.Panel>
           </>
