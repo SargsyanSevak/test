@@ -47,7 +47,7 @@ const ContactMe = () => {
   return (
     <>
       <div className="contact-me-container">
-        <div className="open absolute right-4 top-4 z-50 md:right-10">
+        <div className="open fixed right-4 top-4 z-50 md:right-10">
           <button className="button " onClick={() => setOwnWidth(true)}>Contact</button>
         </div>
       </div>
