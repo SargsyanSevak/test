@@ -39,8 +39,12 @@ main {
 }
 .mobile_menu {
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(12px);
 }
+.bruno-style{
+  font-family: 'Bruno Ace', cursive;
+  
+}
+  
 #tsparticles {
   position: absolute;
   left: 0;

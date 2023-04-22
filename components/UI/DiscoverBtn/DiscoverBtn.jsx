@@ -1,4 +1,3 @@
-
 import { Suspense, useState } from "react";
 import { motion, MotionConfig, useMotionValue } from "framer-motion";
 import { Shapes } from "./Shapes";
@@ -20,7 +19,7 @@ export default function DiscoverBtn() {
   return (
     <MotionConfig transition={transition}>
       <motion.button
-      className="discoverBtn"
+        className="discoverBtn"
         ref={ref}
         initial={false}
         animate={isHover ? "hover" : "rest"}
@@ -28,7 +27,7 @@ export default function DiscoverBtn() {
         variants={{
           rest: { scale: 1 },
           hover: { scale: 1.5 },
-          press: { scale: 1.4 }
+          press: { scale: 1.4 },
         }}
         onHoverStart={() => {
           resetMousePosition();
@@ -50,7 +49,7 @@ export default function DiscoverBtn() {
           className="shapes"
           variants={{
             rest: { opacity: 0 },
-            hover: { opacity: 1 }
+            hover: { opacity: 1 },
           }}
         >
           <div className="pink blush" />
@@ -69,7 +68,12 @@ export default function DiscoverBtn() {
         <motion.div
           variants={{ hover: { scale: 0.85 }, press: { scale: 1.1 } }}
           className="label"
-          style={{display:'flex', justifyContent:'center', alignItems:'center', fontSize:'18px'}}
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            fontSize: "18px",
+          }}
         >
           Discover
         </motion.div>
