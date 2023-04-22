@@ -1,4 +1,3 @@
-import DiscoverBtn from "@/components/UI/DiscoverBtn/DiscoverBtn";
 import Head from "next/head";
 import React from "react";
 

@@ -179,7 +179,7 @@ export default function DotsMobileStepper() {
                   },
                 }}
               >
-                <Carusel activeStep={activeStep} portfolio={portfolio} />
+                <Carusel activeStep={activeStep} portfolio={portfolio} setActiveStep={setActiveStep}/>
               </motion.div>
             </div>
           </div>

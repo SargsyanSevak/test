@@ -3,7 +3,7 @@ import Image from 'next/image'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 
-export default function MyCarusel({ activeStep,portfolio }: any) {
+export default function MyCarusel({setActiveStep, activeStep,portfolio }: any) {
   return (
     <Carousel 
       autoPlay={false}
@@ -12,6 +12,9 @@ export default function MyCarusel({ activeStep,portfolio }: any) {
       showThumbs={false}
       showStatus={false}
       selectedItem={activeStep}
+      onChange={(e:number)=>{
+        setActiveStep(e)
+      }}
     >
       {portfolio.map((el:any, i:number) => {
         return (
