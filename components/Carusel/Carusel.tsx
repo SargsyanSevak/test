@@ -20,7 +20,7 @@ export default function MyCarusel({setActiveStep, activeStep,portfolio }: any) {
       {portfolio.map((el:any, i:number) => {
         return (
             
-          <div key={i}>
+          <div key={i} className='cursor-move'>
             <Image src={el.url} width={200} height={100} alt={el.name}/>
           </div>
         );
