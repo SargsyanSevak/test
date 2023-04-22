@@ -46,7 +46,7 @@ const ContactMe = () => {
   };
   return (
     <>
-      <div className="contact-me-container">
+      <div className="contact-me-container ">
         <div className="open fixed right-4 top-4 z-50 md:right-10">
           <button className="button " onClick={() => setOwnWidth(true)}>Contact</button>
         </div>
@@ -60,7 +60,7 @@ const ContactMe = () => {
         <div className="contact_title h-1/6 pt-4 pl-2 absolute ">
           <Button
             variant="text"
-            color="success"
+            color="primary"
             startIcon={<CloseIcon />}
             className="text-black border-x-1 border-y-1 bg-inherit  border-x-white border-y-white btn_text"
             onClick={() => setOwnWidth(false)}
@@ -70,17 +70,17 @@ const ContactMe = () => {
         </div>
         <div className="contact-logo h-1/2 flex flex-col justify-evenly items-center">
           <Image src="/logo.png" alt="" width={150} height={150} />
-          <h4 className="text-xl text-teal-400 font-bold">
-            Have you any <span className="text-black"> questions?</span>
+          <h4 className="text-xl text-white font-bold">
+            Have you any <span className="text-teal-400"> questions?</span>
           </h4>
-          <h6 className="font-bold text-black">
+          <h6 className="font-bold text-white">
           I&rsquo;m at your <span className="text-teal-400">services</span>{" "}
           </h6>
         </div>
         <div
           className={`contact-input h-1/2 flex flex-col justify-start md:justify-evenly items-center gap-6 md:gap-0`}
         >
-          <h3 className="font-bold text-black py-8">
+          <h3 className="font-bold text-teal-400 py-8">
             {steps[activeStep].label}
           </h3>
           <div>{steps[activeStep].description}</div>
