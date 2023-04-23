@@ -54,7 +54,7 @@ export default function About() {
         >
           <img
             src={url("satellite4")}
-            style={{ width: "15%", marginLeft: "70%" }}
+            style={{ width: "15%", marginLeft: "80%" }}
           />
         </ParallaxLayer>
 
