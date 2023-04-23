@@ -9,7 +9,7 @@ export default function Blog() {
         <meta name="description" content="sargsyan" />
       </Head>
       
-       Blog
+        BLOG
       
       
     </section>
