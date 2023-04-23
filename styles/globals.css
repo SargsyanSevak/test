@@ -28,7 +28,7 @@ main {
 .row-container{
   display: flex;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   padding-left: 90px;
 }
 .container{
@@ -325,6 +325,8 @@ main {
   }
   .row-container{
     padding: 65px 20px 20px 20px;
+    height: 500px;
+
   }
 }
 @media (min-height: 400px) {
