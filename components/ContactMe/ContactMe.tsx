@@ -65,7 +65,7 @@ const ContactMe = () => {
             className="text-black border-x-1 border-y-1 bg-inherit  border-x-white border-y-white btn_text"
             onClick={() => setOwnWidth(false)}
           >
-            Close
+            Hopar
           </Button>
         </div>
         <div className="contact-logo h-1/2 flex flex-col justify-evenly items-center">
