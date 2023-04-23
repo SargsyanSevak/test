@@ -179,7 +179,8 @@ export default function DotsMobileStepper() {
                   },
                 }}
               >
-                <Carusel activeStep={activeStep} portfolio={portfolio} setActiveStep={setActiveStep}/>
+                {/* <Carusel activeStep={activeStep} portfolio={portfolio} setActiveStep={setActiveStep}/> */}
+                <img src="/port2.jpeg" alt="" />
               </motion.div>
             </div>
           </div>
