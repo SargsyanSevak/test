@@ -9,24 +9,26 @@ import Image from "next/image";
 import MyInput from "../UI/Input/Input";
 import TextArea from "../UI/TextArea/TextArea";
 
-
 const steps = [
   {
-    label: ["SEND A MESSAGE","IN A BOTTLE"],
+    label: ["SEND A MESSAGE", "IN A BOTTLE"],
     description: (
-      <TextArea maxLength='200' placeholder='Type your message here...'/>
+      <TextArea maxLength="200" placeholder="Type your message here..." />
     ),
   },
   {
-    label: ["WE JUST NEED YOUR" ,"FULL NAME"],
+    label: ["WE JUST NEED YOUR", "FULL NAME"],
     description: (
-      <MyInput maxLength={30} placeholder={'Type your full name here...'}/>
+      <MyInput maxLength={30} placeholder={"Type your full name here..."} />
     ),
   },
   {
     label: ["AND YOUR", "EMAIL ADDRESS"],
     description: (
-      <MyInput maxLength={30} placeholder={'Type your e-mail address here...'}/>
+      <MyInput
+        maxLength={30}
+        placeholder={"Type your e-mail address here..."}
+      />
     ),
   },
 ];
@@ -47,8 +49,10 @@ const ContactMe = () => {
   return (
     <>
       <div className="contact-me-container ">
-        <div className="open fixed right-4 top-4 z-50 md:right-10">
-          <button className="button " onClick={() => setOwnWidth(true)}>Contact</button>
+        <div className="open fixed right-4 top-4 z-40 md:right-10">
+          <button className="button " onClick={() => setOwnWidth(true)}>
+            Contact
+          </button>
         </div>
       </div>
 
@@ -58,15 +62,12 @@ const ContactMe = () => {
         }`}
       >
         <div className="contact_title h-1/6 pt-4 pl-2 absolute ">
-          <Button
-            variant="text"
-            color="primary"
-            startIcon={<CloseIcon />}
-            className="text-black border-x-1 border-y-1 bg-inherit  border-x-white border-y-white btn_text"
+          <span
+            className="text-white font-bold transition-all cursor-pointer ml-2 hover:text-teal-400 "
             onClick={() => setOwnWidth(false)}
           >
-            Close
-          </Button>
+            X
+          </span>
         </div>
         <div className="contact-logo h-1/2 flex flex-col justify-evenly items-center">
           <Image src="/logo.png" alt="" width={150} height={150} />
@@ -74,7 +75,7 @@ const ContactMe = () => {
             Have you any <span className="text-teal-400"> questions?</span>
           </h4>
           <h6 className="font-bold text-white">
-          I&rsquo;m at your <span className="text-teal-400">services</span>{" "}
+            I&rsquo;m at your <span className="text-teal-400">services</span>{" "}
           </h6>
         </div>
         <div
@@ -82,7 +83,9 @@ const ContactMe = () => {
         >
           <h3 className="font-bold text-white py-8">
             <span>{steps[activeStep].label[0]}</span>
-            <span className="text-teal-400 pl-2">{steps[activeStep].label[1]}</span>
+            <span className="text-teal-400 pl-2">
+              {steps[activeStep].label[1]}
+            </span>
           </h3>
           <div>{steps[activeStep].description}</div>
           <MobileStepper
@@ -108,7 +111,7 @@ const ContactMe = () => {
             }
             backButton={
               <Button
-              color="success"
+                color="success"
                 size="small"
                 onClick={handleBack}
                 disabled={activeStep === 0}
