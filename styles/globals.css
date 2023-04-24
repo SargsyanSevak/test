@@ -340,6 +340,7 @@ main {
   height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
+  
 }
 
 .scroll-container  section {
@@ -353,7 +354,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
- border: 3px solid white;
+ border: 1px solid white;
 }
 .mySection {
   display: flex;
