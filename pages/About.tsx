@@ -77,8 +77,8 @@ export default function About() {
     <>
       <main className="scroll-container container">
         {portfolio.map((image) => (
-          <section>
-            <Image id={image.url} key={image.name} />
+          <section key={image.name}>
+            <Image id={image.url}  />
           </section>
         ))}
       </main>
