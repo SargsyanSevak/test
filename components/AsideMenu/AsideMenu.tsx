@@ -44,7 +44,7 @@ const AsideMenu = () => {
       </div>
 
       <span className="nav_item flex justify-center items-center logo pr-28">
-        Sargsyan
+        Logo
       </span>
       <Link href="/" className="anim fixed top-0">
         <Image src="/logo1.png" alt="logo" width={120} height={120} />

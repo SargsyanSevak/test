@@ -65,7 +65,7 @@ export default function DotsMobileStepper() {
         <meta name="description" content="sargsyan" />
       </Head>
 
-      <div className="row-container works w-full ">
+      <div className="row-container works h-screen w-full ">
         <div className="w-full h-full flex flex-col-reverse md:flex-row">
           <div className=" w-full h-screen md:w-3/5">
             <div className="container  h-full w-full flex flex-col-reverse md:flex-row">
